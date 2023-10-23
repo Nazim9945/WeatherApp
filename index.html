@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="./images/weather.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <p class="weather-title">weather App</p>
+      <div class="tab-container">
+        <div class="tab back-color" data-usertab>Your Location</div>
+
+        <div class="tab" data-searchtab>Search Location</div>
+      </div>
+
+      <div class="info-weather">
+        <!-- 1st view which is grant access location -->
+        <div class="alignclass first-block-view" data-grantaccess>
+          <div class="circle">
+            <img
+              src="./images/location-logo.png"
+              alt="location-img"
+              loading="lazy"
+            />
+          </div>
+          <p class="text1">Grant Location Access</p>
+          <p class="text2">Hit the Grant Access Button To Allow Your Location</p>
+          <button class="grant-access">Grant Access</button>
+        </div>
+
+        <!-- 2nd input-search block view -->
+        <div class="input-weather-info" data-weatherinputinfo>
+          <div class="input-search">
+            <input type="text" placeholder="search for city..." data-search />
+            <button class="btnsearch">🔍</button>
+          </div>
+        </div>
+
+        <!-- 3rd block view which is showing user weather info -->
+
+        <div class="alignclass second-block-view" data-weatherinfo>
+          <div class="flag-text">
+            <p class="country" data-cityname>india</p>
+            <img src="" alt="flag" data-flagicon />
+          </div>
+          <p class="dec-weather" data-weatherdes>Haze</p>
+          <img src="" alt="hazeimg" data-weathericon />
+          <p class="showindeg" data-degreesvalue></p>
+          <div class="three-block">
+            <div class="windspeed card">
+              <img
+                src="./images/windspeed.png"
+                alt="windpeed-img"
+                data-windspeedicon
+              />
+              <p>windspeed</p>
+              <p class="windspeed-value" data-windspeedvalue>25</p>
+            </div>
+            <div class="humidity card">
+              <img
+                src="./images/humidity.png"
+                alt="humidity-img"
+                data-humidityicon
+              />
+              <p>humidity</p>
+              <p class="humidity-value" data-humidityvalue></p>
+            </div>
+            <div class="cloud card">
+              <img src="./images/cloud.png" alt="cloud-img" data-cloudicon />
+              <p>cloud</p>
+              <p class="cloud" data-cloudvalue>25</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- loading state display -->
+        <div class="alignclass loading-state-view" data-loadingstate>
+          <div class="loading-circle">
+            <img
+              src="./images/loading-logo.gif"
+              alt="loading-gif"
+              loading="lazy"
+            />
+          </div>
+          <p class="loading-tag">Loading...</p>
+        </div>
+       <div class="errorpage alignclass">
+        <img src="./images/errorpage.png" alt="404">
+        <p>City Not Found!!</p>
+       </div>
+
+      </div>
+    </div>
+  </body>
+</html>
